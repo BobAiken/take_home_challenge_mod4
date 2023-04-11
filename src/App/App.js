@@ -1,6 +1,8 @@
 import './App.css';
 import React, { useEffect, useState } from 'react';
 import apiCall from '../APIcalls';
+import Homepage from '../Homepage/homepage';
+import { Routes, Route, Navigate } from 'react-router-dom';
 
 function App() {
 
@@ -14,7 +16,9 @@ function App() {
 
   return (
     <div className="App">
-  
+      <Routes>
+        <Route path="/" element={<Homepage articles={articles}/>}/>
+      </Routes>
     </div>
   );
 }
