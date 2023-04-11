@@ -1,14 +1,10 @@
 .article-card {
   height: 5rem;
-  width: 20rem;
-  border: solid black 5px;
+  width: 280px;
+  border: solid black 2px;
   display: flex;
-}
 
-/* .article-image {
-  height: auto;
-  width: 20vw;
-} */
+}
 
 .article-card-container {
   display: flex;
