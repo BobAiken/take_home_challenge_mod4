@@ -1,0 +1,14 @@
+.article-card {
+  height: 5rem;
+  width: 280px;
+  border: solid black 2px;
+  display: flex;
+
+}
+
+.article-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-around;
+  gap: 10px 30px;
+}
