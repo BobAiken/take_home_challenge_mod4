@@ -1,11 +1,15 @@
 import "./Header.css"
-import { useState } from "react"
-import { useLocation } from "react-router-dom"
+import { useState, useEffect } from "react"
+import { useLocation, Link } from "react-router-dom"
 
 export default function Header({section, setSection}) {
 
   const [displayDropDown, setDisplayDropDown] = useState(false)
   let location = useLocation()
+
+  useEffect(()=>{
+    setDisplayDropDown(false)
+  },[location])
 
   const handleDropDown = () => {
     if(location.pathname === "/") {
@@ -17,8 +21,9 @@ export default function Header({section, setSection}) {
 
   return(
     <header className="header">
-      <h1>NY Times Top Articles</h1>
-
+      <Link to="/">
+        <h1>NY Times Top Articles</h1> 
+      </Link>
       <div className="dropdown"> Choose a Category 
         <button className="dropdown-button" onClick={handleDropDown}>{section}</button>
         { displayDropDown && 
@@ -51,9 +56,7 @@ export default function Header({section, setSection}) {
             <div className="dropdown-category" onClick={()=>setSection("world")}>World</div>
           </div>
         }
-
       </div>
-      
     </header>
   )
 }

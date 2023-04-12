@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react"
-import { useParams } from "react-router-dom"
+import { useParams, Link } from "react-router-dom"
 
 export default function Article({articles}) {
 
@@ -20,13 +20,14 @@ export default function Article({articles}) {
   <>
   {articleInfo ? 
 
-  <div className="article">
-    <h2>{articleInfo.title}</h2>
-    <h3>{articleInfo.abstract}</h3> 
-  </div>
-   
-   
-   
+    <div className="article">
+      <h2>{articleInfo.title}</h2>
+      <h3>{articleInfo.abstract}</h3>
+      <Link to="/">
+        <button>Go Home</button>
+      </Link>
+    </div>
+
    : <h2>Loading</h2>}
     
   </>
