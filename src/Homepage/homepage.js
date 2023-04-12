@@ -7,7 +7,7 @@ export default function Homepage({articles}) {
     return(
       <div className="article-card" key={index}>
         <div>{article.title}</div>
-        <img className="article-image" src={article.multimedia[2].url}/>
+        {article.multimedia && <img className="article-image" src={article.multimedia[2].url}/>}
       </div>
     )
   })
