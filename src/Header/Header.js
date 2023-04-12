@@ -1,12 +1,18 @@
 import "./Header.css"
 import { useState } from "react"
+import { useLocation } from "react-router-dom"
 
 export default function Header({section, setSection}) {
 
   const [displayDropDown, setDisplayDropDown] = useState(false)
+  let location = useLocation()
 
   const handleDropDown = () => {
-    setDisplayDropDown(!displayDropDown)
+    if(location.pathname === "/") {
+      setDisplayDropDown(!displayDropDown)
+    } else {
+      setDisplayDropDown(false)
+    }
   }
 
   return(

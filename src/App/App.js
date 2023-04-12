@@ -4,6 +4,7 @@ import apiCall from '../APIcalls';
 import Homepage from '../Homepage/homepage';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Header from '../Header/Header';
+import Article from '../Article/Article';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
       <Header section={section} setSection={setSection}/>
       <Routes>
         <Route path="/" element={<Homepage articles={articles}/>}/>
+        <Route path=":articleTitle" element={<Article articles={articles}/>}/>
       </Routes>
     </div>
   );
