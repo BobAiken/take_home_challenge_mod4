@@ -7,7 +7,7 @@ import Header from '../Header/Header';
 
 function App() {
 
-  const [section, setSection] = useState("arts")
+  const [section, setSection] = useState("home")
   const [articles, setArticles] = useState([])
 
   useEffect(()=>{
