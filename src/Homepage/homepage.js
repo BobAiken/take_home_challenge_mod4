@@ -8,15 +8,17 @@ export default function Homepage({articles}) {
 
   useEffect(()=>{
     if(articles){
-      setArticleCards(articles.map((article,index) => {  
-        return(
-          <Link to={article.title} key={index}>
-            <div className="article-card" key={index}>
-              <div>{article.title}</div>
-              {article.multimedia && <img className="article-image" src={article.multimedia[2].url}/>}
-            </div>
-          </Link>
-        )
+      setArticleCards(articles.map((article,index) => {
+        if(article.title){
+          return(
+            <Link to={article.title} key={index}>
+              <div className="article-card" key={index}>
+                {article.multimedia && <img className="article-image" src={article.multimedia[2].url}/>}
+                <div className="article-title">{article.title}</div>
+              </div>
+            </Link>
+          )
+        }  
     }))
     } else {
       setArticleCards(<>Something has gone wrong...</>)

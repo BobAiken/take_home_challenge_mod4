@@ -1,9 +1,16 @@
 .article-card {
-  height: 6em;
-  width: 280px;
+  height: 140px;
+  width: 400px;
   border: solid black 2px;
   display: flex;
-  justify-content: space-between;
+}
+
+.article-title {
+  margin-left: 10px;
+}
+
+.article-image {
+  width: 140px;
 }
 
 .article-card-container {
@@ -11,4 +18,10 @@
   flex-wrap: wrap;
   justify-content:space-around;
   gap: 10px 30px;
+}
+
+@media screen and (max-width:400px) {
+  .article-card {
+    width: 280px;
+  }
 }
