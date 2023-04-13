@@ -4,7 +4,6 @@ import { useParams, Link } from "react-router-dom"
 export default function Article({articles}) {
 
   const {articleTitle} = useParams()
-  console.log(articleTitle)
   const [articleInfo,setArticleInfo] = useState()
 
   useEffect(()=>{
