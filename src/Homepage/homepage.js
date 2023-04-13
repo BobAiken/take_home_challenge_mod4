@@ -10,7 +10,7 @@ export default function Homepage({articles}) {
     if(articles){
       setArticleCards(articles.map((article,index) => {  
         return(
-          <Link to={article.title}>
+          <Link to={article.title} key={index}>
             <div className="article-card" key={index}>
               <div>{article.title}</div>
               {article.multimedia && <img className="article-image" src={article.multimedia[2].url}/>}
