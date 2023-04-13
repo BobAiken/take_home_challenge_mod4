@@ -1,6 +1,9 @@
 .header {
   margin-bottom: 10px;
+  margin-left: 10px;
 }
+
+
 
 .dropdown {
   position: relative;
@@ -8,13 +11,13 @@
 }
 
 .dropdown-content {
-  position: absolute;
   z-index:1;
   height: 6rem;
   overflow:auto;
-  position: relative;
+  position: absolute;
   background-color: aliceblue;
-  border: solid black 1px
+  border: solid black 1px;
+  left: 135px;
 }
 
 .dropdown-category:hover {

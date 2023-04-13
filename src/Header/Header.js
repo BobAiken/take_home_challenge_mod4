@@ -22,7 +22,7 @@ export default function Header({section, setSection}) {
   return(
     <header className="header">
       <Link to="/">
-        <h1>NY Times Top Articles</h1> 
+        <h1 className="header-title">NY Times Top Articles</h1> 
       </Link>
       <div className="dropdown"> Choose a Category 
         <button className="dropdown-button" onClick={handleDropDown}>{section}</button>
