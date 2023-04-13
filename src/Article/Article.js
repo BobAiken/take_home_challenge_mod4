@@ -22,6 +22,8 @@ export default function Article({articles}) {
     <div className="article">
       <h2>{articleInfo.title}</h2>
       <h3>{articleInfo.abstract}</h3>
+      <img src={articleInfo.multimedia[1].url}/>
+      <br/>
       <Link to="/">
         <button>Go Home</button>
       </Link>
